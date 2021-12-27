@@ -53,6 +53,10 @@ mod back_of_house {
     }
 }
 
+// like symbolic link
+// use crate::front_of_house::hosting;
+pub use crate::front_of_house::hosting;
+
 pub fn eat_at_restaurant() {
     // 여름에 아침 식사로 호밀빵을 주문한다.
     let mut meal = back_of_house::Breakfast::summer("호밀빵");
@@ -68,6 +72,11 @@ pub fn eat_at_restaurant() {
     // enums
     let order1 = back_of_house::Appetizer::Soup;
     let order2 = back_of_house::Appetizer::Salad;
+
+    // use crate
+    hosting::add_to_waitlist();
+    hosting::add_to_waitlist();
+    hosting::add_to_waitlist();
 }
 
 #[cfg(test)]
