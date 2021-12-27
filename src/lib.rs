@@ -45,6 +45,12 @@ mod back_of_house {
             }
         }
     }
+
+    // always expose
+    pub enum Appetizer {
+        Soup,
+        Salad,
+    }
 }
 
 pub fn eat_at_restaurant() {
@@ -58,6 +64,10 @@ pub fn eat_at_restaurant() {
     // 다음 줄의 주석을 해제하면 컴파일 되지 않는다.
     // 고객은 식사와 함께 제공되는 계절 과일을 선택할 수 없다.
     // meal.seasonal_fruit = String::from("블루베리");
+
+    // enums
+    let order1 = back_of_house::Appetizer::Soup;
+    let order2 = back_of_house::Appetizer::Salad;
 }
 
 #[cfg(test)]
