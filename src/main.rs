@@ -9,7 +9,9 @@ fn main() {
     let mut map = HashMap::new();
     map.insert(1, 2);
 
-    let secret_number = rand::thread_rng().gen_range(1, 101);
+    let secret_number = rand::thread_rng().gen_range(1..101);
+
+    println!("{}", secret_number);
 }
 
 fn function1() -> Result {
